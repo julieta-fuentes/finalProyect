@@ -89,5 +89,11 @@ img{
         background-color: rgb(24, 24, 24);
         color: rgb(248, 223, 0);
     }
+    img {
+        border-color: black;
+    }
+    a {
+        color:aqua;
+    }
 
 }
