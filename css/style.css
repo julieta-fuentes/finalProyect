@@ -33,3 +33,61 @@ img{
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+}
+
+@media (min-width: 772px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .grid figure {   
+        border: 5px solid blue;
+        border-radius: 100%;
+        overflow: hidden;
+        text-align: center;
+        height: 40vh;
+    }
+    .grid figure:last-child {
+        grid-column: 1 / -1;
+    }
+    figure img{
+        border: none;
+        height: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    .grid figure:nth-child(3n) {
+        grid-column: 1 / -1;
+    }
+    .grid figure{
+        border-radius: 0%;
+    }
+    img {
+        border-radius: 0%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a {
+    animation: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color:rgb(36, 36, 36);
+        color: rgb(240, 240, 240);
+    }
+    .grid figure {
+        border-color: black;
+        background-color: rgb(24, 24, 24);
+        color: rgb(248, 223, 0);
+    }
+
+}
